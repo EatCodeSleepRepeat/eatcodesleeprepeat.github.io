@@ -62,6 +62,28 @@ const Explore = () => {
           </Grid>
         ))}
       </Grid>
+      <Typography variant="h3" gutterBottom align="center">
+        Don't forget ICT...
+      </Typography>
+      <Grid item xs={12} sm={6} md={4}>
+        <Card>
+          <CardMedia
+            component="video"
+            height="auto"
+            src="/videos/ict.mp4"
+            alt="ai-video-drone"
+            controls
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              AI Drone
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Our drones...
+            </Typography>
+          </CardContent>
+        </Card>
+      </Grid>
       <Button
         variant="contained"
         component={Link}
