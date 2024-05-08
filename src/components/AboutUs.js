@@ -6,6 +6,7 @@ import {
   Card,
   CardContent,
   Button,
+  CardMedia,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -14,26 +15,31 @@ const teamMembers = [
     name: "Elon",
     role: "Whats your learner profile?",
     bio: "write about yourself...",
+    image: "images/elon.jpg",
   },
   {
     name: "Michael",
     role: "Whats your learner profile?",
     bio: "write about yourself...",
+    image: "images/michael.jpg",
   },
   {
     name: "Owen",
     role: "Whats your learner profile?",
     bio: "write about yourself...",
+    image: "images/owen.jpg",
   },
   {
     name: "Jack",
     role: "Whats your learner profile?",
     bio: "write about yourself...",
+    image: "images/jack.jpg",
   },
   {
     name: "Andy",
     role: "Whats your learner profile?",
     bio: "write about yourself...",
+    image: "images/andy.jpg",
   },
 ];
 
@@ -50,6 +56,14 @@ const AboutUs = () => {
         {teamMembers.map((member, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card sx={{ maxWidth: 345, mx: "auto" }}>
+              <CardMedia
+                component="img"
+                image={member.image}
+                alt={member.title}
+                style={{
+                  borderRadius: "50%",
+                }}
+              />
               <CardContent>
                 <Typography variant="h5" component="div">
                   {member.name}

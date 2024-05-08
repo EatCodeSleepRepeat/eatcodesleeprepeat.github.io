@@ -14,17 +14,23 @@ const ktBoards = [
   {
     title: "Write your title..",
     description: "write about your KT board",
-    image: "/images/kt-board-1.jpg",
+    image: "/images/kt_1.jpg",
   },
   {
     title: "Write your title..",
     description: "write about your KT board",
-    image: "/images/kt-board-2.jpg",
+    image: "/images/kt_2.jpg",
   },
   {
     title: "Write your title..",
     description: "write about your KT board",
-    image: "/images/kt-board-3.jpg",
+    image: "/images/kt_3.jpg",
+  },
+
+  {
+    title: "Write your title..",
+    description: "write about your KT board",
+    image: "/images/kt_4.jpg",
   },
 ];
 
