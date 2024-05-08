@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Typography,
@@ -9,6 +9,8 @@ import {
   CardMedia,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import Confetti from "react-confetti";
+import { useWindowSize } from "react-use";
 
 const teamMembers = [
   {
@@ -44,8 +46,36 @@ const teamMembers = [
 ];
 
 const AboutUs = () => {
+  const { width, height } = useWindowSize();
+  const [runConfetti, setRunConfetti] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setRunConfetti(true);
+      setTimeout(() => setRunConfetti(false), 5000); // run confetti for 5 seconds
+    }, 500); // starts 1 second after page load
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <Box sx={{ flexGrow: 1, padding: 2, textAlign: "center" }}>
+    <Box
+      sx={{
+        flexGrow: 1,
+        padding: 2,
+        textAlign: "center",
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('/images/wall.jpg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {runConfetti && (
+        <Confetti
+          width={width}
+          height={Math.max(height, document.body.scrollHeight)}
+        />
+      )}
       <Typography variant="h3" gutterBottom>
         About Us
       </Typography>
@@ -59,10 +89,8 @@ const AboutUs = () => {
               <CardMedia
                 component="img"
                 image={member.image}
-                alt={member.title}
-                style={{
-                  borderRadius: "50%",
-                }}
+                alt={member.name}
+                style={{ borderRadius: "50%" }}
               />
               <CardContent>
                 <Typography variant="h5" component="div">

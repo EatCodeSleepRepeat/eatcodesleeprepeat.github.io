@@ -26,7 +26,6 @@ const ktBoards = [
     description: "write about your KT board",
     image: "/images/kt_3.jpg",
   },
-
   {
     title: "Write your title..",
     description: "write about your KT board",
@@ -36,7 +35,16 @@ const ktBoards = [
 
 const Explore = () => {
   return (
-    <Box sx={{ flexGrow: 1, padding: 2 }}>
+    <Box
+      sx={{
+        flexGrow: 1,
+        padding: 2,
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('/images/school_10.jpg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <Typography variant="h3" gutterBottom align="center">
         Explore Our Inquiry Boards
       </Typography>
@@ -62,27 +70,34 @@ const Explore = () => {
           </Grid>
         ))}
       </Grid>
-      <Typography variant="h3" gutterBottom align="center">
+      <Typography
+        variant="h3"
+        gutterBottom
+        align="center"
+        sx={{ mt: 4, color: "#000000" }}
+      >
         Don't forget ICT...
       </Typography>
-      <Grid item xs={12} sm={6} md={4}>
-        <Card>
-          <CardMedia
-            component="video"
-            height="auto"
-            src="/videos/ict.mp4"
-            alt="ai-video-drone"
-            controls
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              AI Drone
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Our drones...
-            </Typography>
-          </CardContent>
-        </Card>
+      <Grid container justifyContent="center" sx={{ mt: 2 }}>
+        <Grid item xs={12} sm={6} md={4}>
+          <Card>
+            <CardMedia
+              component="video"
+              height="auto"
+              controls
+              src="/videos/ict.mp4"
+              alt="AI Drone"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                AI Drone
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Our drones...
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
       </Grid>
       <Button
         variant="contained"
@@ -93,6 +108,9 @@ const Explore = () => {
           "&:hover": { backgroundColor: "white" },
           color: "black",
           marginTop: 10,
+          display: "block", // Ensures button is block-level for centering
+          mx: "auto", // Centers the button
+          width: "fit-content", // Ensures the button width fits its content
         }}
       >
         Home
