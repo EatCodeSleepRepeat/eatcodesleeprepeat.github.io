@@ -12,17 +12,17 @@ import { Link } from "react-router-dom";
 
 const ktBoards = [
   {
-    title: "Write your title",
+    title: "Write your title..",
     description: "write about your KT board",
     image: "/images/kt-board-1.jpg",
   },
   {
-    title: "Write your title",
+    title: "Write your title..",
     description: "write about your KT board",
     image: "/images/kt-board-2.jpg",
   },
   {
-    title: "Write your title",
+    title: "Write your title..",
     description: "write about your KT board",
     image: "/images/kt-board-3.jpg",
   },
