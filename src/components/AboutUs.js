@@ -58,8 +58,8 @@ const AboutUs = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setRunConfetti(true);
-      setTimeout(() => setRunConfetti(false), 5000); // run confetti for 5 seconds
-    }, 500); // starts 1 second after page load
+      setTimeout(() => setRunConfetti(false), 5000); // Run confetti for 5 seconds
+    }, 1000); // Starts 1 second after page load
 
     return () => clearTimeout(timer);
   }, []);
@@ -96,7 +96,15 @@ const AboutUs = () => {
                 component="img"
                 image={member.image}
                 alt={member.name}
-                style={{ borderRadius: "50%" }}
+                sx={{
+                  height: 180,
+                  width: 160,
+                  objectFit: "cover",
+                  objectPosition: "center",
+                  borderRadius: "50%",
+                  margin: "auto",
+                  marginTop: 3,
+                }}
               />
               <CardContent>
                 <Typography variant="h5" component="div">
