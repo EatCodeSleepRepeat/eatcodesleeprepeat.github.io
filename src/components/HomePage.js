@@ -48,10 +48,10 @@ const HomePage = () => {
   };
 
   const images = [
-    "/images/example_1.jpg",
-    "/images/example_2.png",
-    "/images/example_3.png",
-    "/images/example_4.jpg",
+    "/images/front_1.jpg",
+    "/images/front_2.jpg",
+    "/images/front_3.jpg",
+    "/images/front_4.jpg",
   ];
 
   return (
@@ -125,7 +125,14 @@ const HomePage = () => {
           A description of our journey:
         </Typography>
         <Typography variant="body2" sx={{ mt: 1 }}>
-          We started our journey....
+          <Typography variant="body2" sx={{ mt: 1 }}>
+            We are doing a PYPX project. We learned how to study right, and that
+            team spirit is very important. We learned a lot about science and
+            technology that made us more open-minded.
+          </Typography>
+        </Typography>
+        <Typography variant="body2" sx={{ mt: 1 }}>
+          Technology is used for food, education, making things
         </Typography>
       </Box>
 

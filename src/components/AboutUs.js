@@ -15,33 +15,39 @@ import { useWindowSize } from "react-use";
 const teamMembers = [
   {
     name: "Elon",
-    role: "Whats your learner profile?",
-    bio: "write about yourself...",
-    image: "images/elon.jpg",
+    role: "balanced",
+    bio: "My goal is to grow in every way because I like learning new things.",
+    image: "images/profile_elon.jpg",
   },
   {
     name: "Michael",
-    role: "Whats your learner profile?",
-    bio: "write about yourself...",
-    image: "images/michael.jpg",
+    role: "thinkers",
+    bio: "My goal is to be a thinker because I enjoy solving puzzles and problems.",
+    image: "images/profile_michael.jpg",
   },
   {
     name: "Owen",
-    role: "Whats your learner profile?",
-    bio: "write about yourself...",
-    image: "images/owen.jpg",
+    role: "principied",
+    bio: "My goal is to be good person with rules because it good to do right things.",
+    image: "images/profile_owen.jpg",
   },
   {
     name: "Jack",
-    role: "Whats your learner profile?",
-    bio: "write about yourself...",
-    image: "images/jack.jpg",
+    role: "inquirer",
+    bio: "My goal is to be an inquirer because I love asking questions to learn.",
+    image: "images/profile_jack.jpg",
   },
   {
     name: "Andy",
-    role: "Whats your learner profile?",
-    bio: "write about yourself...",
-    image: "images/andy.jpg",
+    role: "knowledgeble",
+    bio: "I want know lot things because I think knowing stuff make you smart.",
+    image: "images/profile_andy.jpg",
+  },
+  {
+    name: "Frank",
+    role: "principled",
+    bio: "I want be principled because my mom says being honest is best.",
+    image: "images/profile_frank.jpg",
   },
 ];
 
@@ -96,7 +102,7 @@ const AboutUs = () => {
                 <Typography variant="h5" component="div">
                   {member.name}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" sx={{ mt: 1, color: "royalblue" }}>
                   {member.role}
                 </Typography>
                 <Typography variant="body1" sx={{ mt: 1 }}>
