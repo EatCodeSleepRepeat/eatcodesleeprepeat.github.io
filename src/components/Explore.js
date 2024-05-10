@@ -14,7 +14,7 @@ const ktBoards = [
   {
     title: "Technology and Food",
     description:
-      "Technology and its influence on what we eat. Technology can make artificial food that is harmful to our bodies. We need to be more careful about what we eat. Always know where it comes from. ",
+      "Technology and its influence on what we eat. Technology can make artificial food that is harmful to our bodies. We need to be more careful about what we eat. Always know where it comes from.",
     image: "/images/kt_1.jpg",
   },
   {
@@ -34,6 +34,39 @@ const ktBoards = [
     description:
       "This is our reason for our inquiry. We need to know our beginning to start",
     image: "/images/kt_4.jpg",
+  },
+];
+
+const videoData = [
+  {
+    title: "AI Drone",
+    description:
+      "These drones are low-altitude economy-Drone material distribution. This business mode is already being tested in Shenzhen. To understand this technology better we decided to make it by ourselves. Come and see!",
+    video: "/videos/ict.mp4",
+  },
+  {
+    title: "花坛指示牌 (Flowerbed Signage)",
+    description:
+      "Exploring the practical application of 3D printing in creating informative signage for public and private spaces.",
+    video: "/videos/video_2.mp4",
+  },
+  {
+    title: "无人机装配仓ver1 (Drone Assembly Warehouse ver1)",
+    description:
+      "A look into the first version of a drone assembly warehouse, focusing on its design and initial functionalities.",
+    video: "/videos/video_3.mp4",
+  },
+  {
+    title: "无人机装配仓version2 (Drone Assembly Warehouse version2)",
+    description:
+      "Enhancing our drone assembly warehouse with advanced technologies for improved efficiency and capabilities.",
+    video: "/videos/video_4.mp4",
+  },
+  {
+    title: "晷针结构图 (Sundial Structure)",
+    description:
+      "Reviving ancient technology through 3D printing, showcasing how historical time-telling devices can be recreated and studied today.",
+    video: "/videos/video_5.mp4",
   },
 ];
 
@@ -82,29 +115,28 @@ const Explore = () => {
       >
         Don't forget ICT...
       </Typography>
-      <Grid container justifyContent="center" sx={{ mt: 2 }}>
-        <Grid item xs={12} sm={6} md={4}>
-          <Card>
-            <CardMedia
-              component="video"
-              height="auto"
-              controls
-              src="/videos/ict.mp4"
-              alt="AI Drone"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                AI Drone
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                These drones are low-altitude economy-Drone material
-                distribution. This business mode is already being tested in
-                Shenzhen. To understand this technology better we decided to
-                make it by ourself. Come and see see
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
+      <Grid container justifyContent="center" spacing={4} sx={{ mt: 2 }}>
+        {videoData.map((video, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Card>
+              <CardMedia
+                component="video"
+                height="auto"
+                controls
+                src={video.video}
+                alt={video.title}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {video.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {video.description}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
       </Grid>
       <Button
         variant="contained"
@@ -115,9 +147,9 @@ const Explore = () => {
           "&:hover": { backgroundColor: "white" },
           color: "black",
           marginTop: 10,
-          display: "block", // Ensures button is block-level for centering
-          mx: "auto", // Centers the button
-          width: "fit-content", // Ensures the button width fits its content
+          display: "block",
+          mx: "auto",
+          width: "fit-content",
         }}
       >
         Home
