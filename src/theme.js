@@ -10,7 +10,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Comic Neue", cursive',
+    fontFamily: ["Roboto", "sans-serif"].join(","),
     fontSize: 14,
   },
 });

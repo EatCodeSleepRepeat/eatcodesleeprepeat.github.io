@@ -13,11 +13,23 @@ const initialItems = [
   { id: 8, type: "photo", src: "/images/photo_7.jpg" },
   { id: 9, type: "photo", src: "/images/photo_8.jpg" },
   { id: 10, type: "photo", src: "/images/photo_9.jpg" },
-  { id: 11, type: "photo", src: "" }, // empty photo block
-  { id: 12, type: "photo", src: "" },
-  { id: 13, type: "photo", src: "" },
-  { id: 14, type: "photo", src: "" },
-  { id: 15, type: "photo", src: "" },
+  { id: 11, type: "photo", src: "/images/photo_10.jpg" },
+  { id: 12, type: "photo", src: "/images/photo_11.jpg" },
+  { id: 13, type: "photo", src: "/images/photo_12.jpg" },
+  { id: 14, type: "photo", src: "/images/photo_13.jpg" },
+  { id: 15, type: "photo", src: "/images/photo_14.jpg" },
+  { id: 16, type: "photo", src: "/images/photo_15.jpg" },
+  { id: 17, type: "photo", src: "/images/photo_16.jpg" },
+  { id: 18, type: "photo", src: "/images/photo_17.jpg" },
+  { id: 19, type: "photo", src: "/images/photo_18.jpg" },
+  { id: 20, type: "photo", src: "/images/photo_19.jpg" },
+  { id: 21, type: "photo", src: "/images/photo_20.jpg" },
+  { id: 22, type: "photo", src: "/images/photo_21.jpg" },
+  { id: 23, type: "photo", src: "/images/photo_22.jpg" },
+  { id: 24, type: "photo", src: "/images/photo_23.jpg" },
+  { id: 25, type: "photo", src: "/images/photo_24.jpg" },
+  { id: 26, type: "photo", src: "/images/photo_25.jpg" },
+  { id: 27, type: "photo", src: "/images/photo_26.jpg" },
 ];
 
 const ExplorationContent = () => {
