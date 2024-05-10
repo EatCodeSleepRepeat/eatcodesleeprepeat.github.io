@@ -131,9 +131,6 @@ const HomePage = () => {
             technology that made us more open-minded.
           </Typography>
         </Typography>
-        <Typography variant="body2" sx={{ mt: 1 }}>
-          Technology is used for food, education, making things
-        </Typography>
       </Box>
 
       <Grid container spacing={2} justifyContent="center">
